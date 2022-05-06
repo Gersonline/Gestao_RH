@@ -7,10 +7,17 @@
             One Of 3
         </div>
         <div class="col-sm">
-            One Of 3
+            Ola {{ usuario.funcionario.nome }}
+            <a href="{% url 'list_funcionarios' %}">Editar Empresa</a>
         </div>
         <div class="col-sm">
             <a href="{% url 'logout' %}">logout</a>
+
+            {% if usuario.funcionario.empresa %}
+                <a href="{% url 'edit_empresa' usuario.funcionario.empresa.id %}">Editar Empresa</a>
+            {% else %}
+                <a href="{% url 'create_empresa' %}">Criar Empresa</a>
+            {% endif %}
         </div>
     </div>
 
