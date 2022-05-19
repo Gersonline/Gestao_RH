@@ -13,7 +13,7 @@ import os.path
 from pathlib import Path
 from django.apps import AppConfig
 
-AppConfig.default = False
+#AppConfig.default = False
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -26,7 +26,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-88v4!zf1c07%)nzk+kr5+g6q^80iu2vf!wkfd8caek9#2*l7o%'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-#DEBUG = True
+DEBUG = True
 
 ALLOWED_HOSTS = ['54.90.139.218']
 
@@ -128,15 +128,14 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
-
-
+'''
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static")
 ]
+'''
 
 
-
-#STATIC_ROOT = os.path.join('/home/ubuntu/Gestao_RH/static/')
+STATIC_ROOT = os.path.join('/home/ubuntu/Gestao_RH/static/')
 
 
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
