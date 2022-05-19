@@ -13,7 +13,7 @@ import os.path
 from pathlib import Path
 from django.apps import AppConfig
 
-#AppConfig.default = False
+AppConfig.default = False
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -129,14 +129,14 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-'''
+
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static")
 ]
-'''
 
 
-STATIC_ROOT = os.path.join('/home/ubuntu/Gestao_RH/static/')
+
+#STATIC_ROOT = os.path.join('/home/ubuntu/Gestao_RH/static/')
 
 
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
