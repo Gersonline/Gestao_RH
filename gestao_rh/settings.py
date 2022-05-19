@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 import os.path
 from pathlib import Path
-#from django.apps import AppConfig
+from django.apps import AppConfig
 
 #AppConfig.default = False
 
