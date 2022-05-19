@@ -8,9 +8,9 @@
     {{ form|bootstrap }}
     <button class="btn btn-main" type="submit">Salvar</button>
 </form>
-
-<a class="btn btn-success" href="{% url 'create_documento' object.id %}"> Adicionar Documentos</a>
-
+{% if object %}
+    <a class="btn btn-success" href="{% url 'create_documento' object.id %}"> Adicionar Documentos</a>
+{% endif %}
 {% for documento in object.documento_set.all%}
     <br>
     <a href="{{ documento.arquivo.url }}"> {{  documento }} </a>
