@@ -135,7 +135,7 @@ STATICFILES_DIRS = [
 
 
 
-#STATIC_ROOT = os.path.join('/home/ubuntu/Gestao_RH/static/')
+STATIC_ROOT = os.path.join(BASE_DIR, "static/")
 
 
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
