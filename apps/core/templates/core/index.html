@@ -13,7 +13,13 @@
             <a href="{% url 'list_hora_extra' %}">Gerenciar banco de horas</a>
         </div>
         <div class="col-sm">
-            <a href="{% url 'logout' %}">logout</a>
+        {% csrf_token %}
+        {% if user.is_authenticated %}
+            <form method="post" action="{% url 'logout' %}">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-link" style="padding: 0; border: none; background: none;">Logout</button>
+            </form>
+        {% endif %}
 
             {% if usuario.funcionario.empresa %}
                 <a href="{% url 'edit_empresa' usuario.funcionario.empresa.id %}">Editar Empresa</a>
